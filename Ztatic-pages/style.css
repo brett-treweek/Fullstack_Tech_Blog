@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     background-color: rgb(160, 160, 160);
 }
@@ -21,7 +21,6 @@ body {
     align-items: center;
     width: 100vw;
     padding: 2rem;
-    padding-left: 3rem;
 }
 
 .header ul {
@@ -50,7 +49,7 @@ body {
     padding: 0.5rem;
     color: rgb(255, 255, 255);
     text-align: center;
-    letter-spacing: 1px;
+    letter-spacing: 0.1ch;
 }
 
 .header ul a:hover {
@@ -70,11 +69,11 @@ body {
     padding: 1.5rem 2rem;
     background-color: #2a224e;
     color: #fff;
-    letter-spacing: .7px;
+    letter-spacing: 0.1ch;
 }
 
 .blogTitle h3 {
-    font-weight: lighter;
+    font-weight: 300;
 }
 
 .blogContent {
