@@ -82,4 +82,18 @@
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
   }
+
+  #commentTitle{
+    text-align: center;
+  }
+
+  .commentTitle{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #67798d;
+    color: #fff;
+    letter-spacing: 0.1ch;
+  }
   

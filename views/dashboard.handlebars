@@ -1,0 +1,11 @@
+<div>
+{{#each posts.posts as |post|}}
+{{> dashboard-posts}}
+{{/each}}
+</div>
+<div>
+<h2 id="commentTitle">Comments</h2>
+{{#each comments as |comment|}}
+{{> dashboard-comments}}
+{{/each}}
+</div>
