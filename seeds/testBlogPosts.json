@@ -1,0 +1,21 @@
+[
+    { "author": "Brett", 
+      "title": "Music Near Me",
+      "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero consequatur repudiandae itaque numquam provident, magnam delectus tempore aperiam, inventore assumenda, ipsum nemo ut? Itaque, nemo.",
+      "dateCreated": "09/08/1982",
+      "userId": 1
+    },
+    { "author": "Mia", 
+      "title": "They call me Lilith- Queen of Hell",
+      "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero consequatur repudiandae itaque numquam provident, magnam delectus tempore aperiam, inventore assumenda, ipsum nemo ut? Itaque, nemo.",
+      "date": "27/11/2020",
+      "userId": 2
+    },
+    { "author": "Meryl", 
+      "title": "I love synchronised splashing",
+      "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero consequatur repudiandae itaque numquam provident, magnam delectus tempore aperiam, inventore assumenda, ipsum nemo ut? Itaque, nemo.",
+      "date": "30/07/1991",
+      "userId": 3
+    }
+    
+  ]

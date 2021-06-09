@@ -1,0 +1,21 @@
+[
+    {
+      "author": "Brett",
+      "content": "This is fake news",
+      "dateCreated": "09/06/2021",
+      "postsId": 2  
+    },
+    {
+      "author": "Mia",
+      "content": "Wow this is fascinating lol",
+      "dateCreated": "09/06/2021",
+      "postsId": 1  
+    },
+    {
+      "author": "Meryl",
+      "content": "Hexagons are the bestagons",
+      "dateCreated": "09/06/2021",
+      "postsId": 3  
+    }
+    
+  ]
