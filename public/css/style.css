@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+    background-color: rgb(160, 160, 160);
+  }
+  
+  .header {
+    background-color: #2a224e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding: 2rem;
+  }
+  
+  .header ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .logo {
+    font-size: 4.5rem;
+  }
+  
+  .header li {
+    list-style: none;
+    width: 200px;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  #logo {
+    font-size: 2rem;
+  }
+  
+  .header a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    letter-spacing: 0.1ch;
+  }
+  
+  .header ul a:hover {
+    border-bottom: 2px solid #ffffff;
+  }
+  
+  .blogContainer {
+    margin: 2rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .blogTitle {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    background-color: #2a224e;
+    color: #fff;
+    letter-spacing: 0.1ch;
+  }
+  
+  .blogTitle h3 {
+    font-weight: 300;
+  }
+  
+  .blogContent {
+    padding: 2rem;
+    background-color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  

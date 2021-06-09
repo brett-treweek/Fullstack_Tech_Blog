@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+
     <title>The Tech Blog</title>
-</head>
-<body>
-  <header>
+  </head>
+  <body>
+    <header class="header">
+      <a id="logo" href="./index.html">Fullstack Tech Blog</a>
       <nav>
-          <ul>
-              <li><a href="/Fullstack_Tech_Blog/views/layouts/main.handlebars">Home</a></li>
-              <li><a href="/Fullstack_Tech_Blog/views/dashboard.handlebars">Dashboard</a></li>
-              <li>Login</li>
-          </ul>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./dashboard.html">Dashboard</a></li>
+          <li><a href="./login.html">Login</a></li>
+        </ul>
       </nav>
-  </header>
-    <div>
-        <h1>The Tech Blog</h1>
-    </div>
-</body>
+    </header>
+    {{{ body }}}
+  </body>
 </html>
