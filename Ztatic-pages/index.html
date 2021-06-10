@@ -18,9 +18,9 @@
       <a id="logo" href="./index.html">Fullstack Tech Blog</a>
       <nav>
         <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./dashboard.html">Dashboard</a></li>
-          <li><a id="loginBtn" href="./login.html">Login</a></li>
+          <button>Home</button>
+          <button>Dashboard</button>
+          <button id="loginBtn">Sign In</button>
         </ul>
       </nav>
     </header>
@@ -28,7 +28,7 @@
     <section class="signModal">
       <div class="modalContent">
         <h1 class="modalTitle">Sign Up</h1>
-        <button class="closeBtn">&times;</button>
+        <button id="closeSign" class="closeBtn">&times;</button>
       </div>
       <form class="form" action="#">
         <input type="text" placeholder="Username" />
@@ -41,7 +41,7 @@
     <section class="loginModal">
       <div class="modalContent">
         <h1 class="modalTitle">Login</h1>
-        <button class="closeBtn">&times;</button>
+        <button id="closeLogin" class="closeBtn">&times;</button>
       </div>
 
       <form class="form" action="#">
@@ -56,22 +56,7 @@
         <button id="signBtn" >Sign Up</button>
       </div>
     </section>
-
-    <!-- <section class="blogContainer">
-      <div class="blogTitle">
-        <h3>My First Blog Post</h3>
-        <p>Posted by Brett Treweek on 07/06/2021</p>
-      </div>
-      <div class="blogContent">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt maiores
-        eveniet magni quam. Voluptatem architecto, nam, accusantium deleniti
-        voluptas quidem fugit quis est ducimus cum officiis perferendis nobis
-        necessitatibus! Corporis corrupti doloremque ratione fugit, nesciunt
-        blanditiis sint vitae voluptates soluta officiis ullam eligendi cumque a
-        provident exercitationem.
-      </div>
-    </section>
-
+    <main id="content">
     <section class="blogContainer">
       <div class="blogTitle">
         <h3>My First Blog Post</h3>
@@ -100,6 +85,24 @@
         blanditiis sint vitae voluptates soluta officiis ullam eligendi cumque a
         provident exercitationem.
       </div>
-    </section> -->
+    </section>
+
+    <section class="blogContainer">
+      <div class="blogTitle">
+        <h3>My First Blog Post</h3>
+        <p>Posted by Brett Treweek on 07/06/2021</p>
+      </div>
+      <div class="blogContent">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt maiores
+        eveniet magni quam. Voluptatem architecto, nam, accusantium deleniti
+        voluptas quidem fugit quis est ducimus cum officiis perferendis nobis
+        necessitatibus! Corporis corrupti doloremque ratione fugit, nesciunt
+        blanditiis sint vitae voluptates soluta officiis ullam eligendi cumque a
+        provident exercitationem.
+      </div>
+    </section>
+  </main>
+
+    <script src="./script.js" ></script>
   </body>
 </html>
