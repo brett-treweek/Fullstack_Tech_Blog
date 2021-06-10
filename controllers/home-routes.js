@@ -11,7 +11,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/dashboard/:id", async (req, res) => {
+router.get("/users/:id", async (req, res) => {
   try {
     const userDashboard = await User.findByPk(req.params.id, {
       include: [
@@ -26,14 +26,9 @@ router.get("/dashboard/:id", async (req, res) => {
       ],
     });
 
-    const posts = userDashboard.get({ plain: true });
-
-    console.log("HHHHHHHHHH-------", userDashboard);
-    console.log("ooooooooOOOOOO-------", posts);
-    console.log("IIIIIIIIII-------", posts.posts[0].comments[0]);
-
-    const comments = posts.posts[0].comments;
-    res.render("dashboard", { posts, comments });
+    let user = userDashboard.get({ plain: true });
+    console.log('AAAAAAAAAA', user)
+    res.render("dashboard", { posts: user.posts });
   } catch (error) {
     res.status(500).json(error);
   }

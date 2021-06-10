@@ -3,7 +3,23 @@
       "author": "Brett",
       "content": "This is fake news",
       "dateCreated": "09/06/2021",
+      "postsId": 1,
+      "userId": 1  
+  
+    },
+    {
+      "author": "Brett",
+      "content": "This is great",
+      "dateCreated": "09/06/2021",
       "postsId": 2,
+      "userId": 1  
+  
+    },
+    {
+      "author": "Brett",
+      "content": "This is old news",
+      "dateCreated": "09/06/2021",
+      "postsId": 3,
       "userId": 1  
   
     },
@@ -11,7 +27,23 @@
       "author": "Mia",
       "content": "Wow this is fascinating lol",
       "dateCreated": "09/06/2021",
-      "postsId": 3,
+      "postsId": 4,
+      "userId": 2  
+ 
+    },
+    {
+      "author": "Mia",
+      "content": "Wow this is boring lol",
+      "dateCreated": "09/06/2021",
+      "postsId": 5,
+      "userId": 2  
+ 
+    },
+    {
+      "author": "Mia",
+      "content": "Wow this is so dumb lol",
+      "dateCreated": "09/06/2021",
+      "postsId": 6,
       "userId": 2  
  
     },
@@ -19,7 +51,21 @@
       "author": "Meryl",
       "content": "Hexagons are the bestagons",
       "dateCreated": "09/06/2021",
-      "postsId": 1,
+      "postsId": 7,
+      "userId": 3  
+    },
+    {
+      "author": "Meryl",
+      "content": "Hexagons are what?",
+      "dateCreated": "09/06/2021",
+      "postsId": 8,
+      "userId": 3  
+    },
+    {
+      "author": "Meryl",
+      "content": "Hexagons are the worstagons",
+      "dateCreated": "09/06/2021",
+      "postsId": 9,
       "userId": 3  
     }
     

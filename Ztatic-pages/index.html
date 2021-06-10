@@ -20,11 +20,44 @@
         <ul>
           <li><a href="./index.html">Home</a></li>
           <li><a href="./dashboard.html">Dashboard</a></li>
-          <li><a href="./login.html">Login</a></li>
+          <li><a id="loginBtn" href="./login.html">Login</a></li>
         </ul>
       </nav>
     </header>
-    <section class="blogContainer">
+
+    <section class="signModal">
+      <div class="modalContent">
+        <h1 class="modalTitle">Sign Up</h1>
+        <button class="closeBtn">&times;</button>
+      </div>
+      <form class="form" action="#">
+        <input type="text" placeholder="Username" />
+        <input type="password" placeholder="Password" />
+        <input type="password" placeholder="Confirm Password" />
+        <input id="submitBtn" type="submit" value="Submit" />
+      </form>
+    </section>
+
+    <section class="loginModal">
+      <div class="modalContent">
+        <h1 class="modalTitle">Login</h1>
+        <button class="closeBtn">&times;</button>
+      </div>
+
+      <form class="form" action="#">
+        <input type="text" placeholder="Username" />
+        <input type="password" placeholder="Password" />
+        <input type="password" placeholder="Confirm Password" />
+        <input id="submitBtn" type="submit" value="Submit" />
+      </form>
+
+      <div class="signUp">
+        <p>Not signed up?</p>
+        <button id="signBtn" >Sign Up</button>
+      </div>
+    </section>
+
+    <!-- <section class="blogContainer">
       <div class="blogTitle">
         <h3>My First Blog Post</h3>
         <p>Posted by Brett Treweek on 07/06/2021</p>
@@ -67,6 +100,6 @@
         blanditiis sint vitae voluptates soluta officiis ullam eligendi cumque a
         provident exercitationem.
       </div>
-    </section>
+    </section> -->
   </body>
 </html>

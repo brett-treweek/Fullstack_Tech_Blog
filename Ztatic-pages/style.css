@@ -82,3 +82,102 @@ body {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
+/* ================= Sign in/up Modals =================== */
+
+.signModal {
+  position: fixed;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  border-radius: 15px;
+  background-color: teal;
+}
+.loginModal {
+  position: fixed;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  border-radius: 15px;
+  background-color: teal;
+}
+
+.closeBtn {
+  font-size: larger;
+  position: absolute;
+  background-color: teal;
+  color: #fff;
+  top: 1.5rem;
+  right: 1.5rem;
+  padding: 0.05rem 0.4rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.closeBtn:hover {
+  background-color: rgb(255, 0, 0);
+}
+
+.modalContent {
+  text-align: center;
+  color: #fff;
+  letter-spacing: 0.3ch;
+  font-size: larger;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 1rem;
+}
+
+.form input {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 10px;
+  border: none;
+}
+
+.signUp {
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#submitBtn {
+  width: 50%;
+  padding: 0.7rem;
+  cursor: pointer;
+}
+#submitBtn:hover {
+  background-color: rgb(0, 17, 255);
+  color: #fff;
+}
+
+#signBtn {
+  width: 25%;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+}
+#signBtn:hover {
+  background-color: rgb(0, 17, 255);
+  color: #fff;
+}
