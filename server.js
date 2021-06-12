@@ -18,6 +18,8 @@ const sess = {
   saveUninitialized: true,
   store: new SequelizeStore({
     db: sequelize,
+    expiration: 1000,
+    // checkExpirationInterval: 15 
   }),
 };
 
@@ -35,5 +37,5 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log(`Started Listening on ${PORT}`));
+  app.listen(PORT, () => console.log(`Started Listening on Port ${PORT}`));
 });

@@ -12,6 +12,10 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/users/:id", async (req, res) => {
+  console.log(req.session)
+  if (!req.session.loggedIn) {
+    res.redirect('/login');
+  } else {
   try {
     const userDashboard = await User.findByPk(req.params.id, {
       include: [
@@ -27,11 +31,19 @@ router.get("/users/:id", async (req, res) => {
     });
 
     let user = userDashboard.get({ plain: true });
-    console.log('AAAAAAAAAA', user)
     res.render("dashboard", { posts: user.posts });
   } catch (error) {
     res.status(500).json(error);
   }
+}});
+
+router.get('/login', (req, res) => {
+  // if (req.session.loggedIn) {
+  //   res.redirect('/');
+  //   return;
+  // }
+
+  res.render('login');
 });
 
 module.exports = router;

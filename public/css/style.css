@@ -1,99 +1,205 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    font-family: "Roboto", sans-serif;
-    line-height: 1.6;
-    background-color: rgb(160, 160, 160);
-  }
-  
-  .header {
-    background-color: #2a224e;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100vw;
-    padding: 2rem;
-  }
-  
-  .header ul {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  
-  .logo {
-    font-size: 4.5rem;
-  }
-  
-  .header li {
-    list-style: none;
-    width: 200px;
-    text-decoration: none;
-    text-align: center;
-  }
-  
-  #logo {
-    font-size: 2rem;
-  }
-  
-  .header a {
-    text-decoration: none;
-    font-size: 1.3rem;
-    padding: 0.5rem;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    letter-spacing: 0.1ch;
-  }
-  
-  .header ul a:hover {
-    border-bottom: 2px solid #ffffff;
-  }
-  
-  .blogContainer {
-    margin: 2rem;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-  }
-  
-  .blogTitle {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    padding: 1.5rem 2rem;
-    background-color: #2a224e;
-    color: #fff;
-    letter-spacing: 0.1ch;
-  }
-  
-  .blogTitle h3 {
-    font-weight: 300;
-  }
-  
-  .blogContent {
-    padding: 2rem;
-    background-color: #fff;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  #commentTitle{
-    text-align: center;
-  }
+html {
+  scroll-behavior: smooth;
+}
 
-  .commentTitle{
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    background-color: #67798d;
-    color: #fff;
-    letter-spacing: 0.1ch;
-  }
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  background-color: rgb(160, 160, 160);
+}
+
+.header {
+  background-color: #2a224e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  padding: 2rem;
+}
+
+.header ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.logo {
+  font-size: 4.5rem;
+}
+
+.header button {
+  background: transparent;
+  border: transparent;
+  list-style: none;
+  width: 200px;
+  text-decoration: none;
+  text-align: center;
+}
+
+#logo {
+  font-size: 2rem;
+}
+
+.header a, .header button{
+  text-decoration: none;
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  letter-spacing: 0.1ch;
+  cursor:pointer;
+}
+
+.header ul button:hover {
+  border-bottom: 2px solid #ffffff;
   
+}
+
+/* ================= Blog Posts ================== */
+
+.blogContainer {
+  margin: 2rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.blogTitle {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background-color: #2a224e;
+  color: #fff;
+  letter-spacing: 0.1ch;
+}
+
+.blogTitle h3 {
+  font-weight: 300;
+}
+
+.blogContent {
+  padding: 2rem;
+  background-color: #fff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* ================= Sign in/up Modals =================== */
+
+.loginModal {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  flex-direction: column;
+  padding: 3rem;
+  border-radius: 15px;
+  background-color: teal;
+}
+.signModal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  flex-direction: column;
+  padding: 3rem;
+  border-radius: 15px;
+  background-color: teal;
+}
+
+.closeBtn {
+  font-size: larger;
+  position: absolute;
+  background-color: teal;
+  color: #fff;
+  top: 1.5rem;
+  right: 1.5rem;
+  padding: 0.05rem 0.4rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.closeBtn:hover {
+  background-color: rgb(255, 0, 0);
+}
+
+.modalContent {
+  text-align: center;
+  color: #fff;
+  letter-spacing: 0.3ch;
+  font-size: larger;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 1rem;
+}
+
+.form input {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 10px;
+  border: none;
+}
+
+.signUp {
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#submitLogin, #submitSign {
+  background-color: rgb(91, 97, 184);
+  color: #fff;
+  width: 50%;
+  padding: 0.7rem;
+  cursor: pointer;
+}
+#submitSign:hover {
+  background-color: rgb(0, 17, 255);
+  color: #fff;
+}
+#submitLogin:hover {
+  background-color: rgb(0, 17, 255);
+  color: #fff;
+}
+
+#signBtn {
+  background-color: rgb(241, 181, 140);
+  width: 25%;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+}
+#signBtn:hover {
+  background-color: rgb(0, 17, 255);
+  color: #fff;
+}
+
+/* Hide Class */
+.hide {
+  display: none !important;
+}
+
+.display {
+  display: flex !important;
+}

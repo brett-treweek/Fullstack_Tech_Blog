@@ -18,12 +18,25 @@
       <a id="logo" href="/">Fullstack Tech Blog</a>
       <nav>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/dashboard/{{id}}">Dashboard</a></li>
-          <li><a href="./login.html">Login</a></li>
+          {{!-- <li><a href="/">Home</a></li> --}}
+          <a href="/users/{{id}}">Dashboard</a>
+          <a href="/">Home</a>
+          {{#if loggedIn}}
+          <button id="logoutBtn">Logout</button>
+          {{else}}
+          <a id="loginBtn" href="/login">Login</a>
+          {{/if}}
+          
         </ul>
       </nav>
     </header>
-    {{{ body }}}
+
+    
+      {{{ body }}}
+    </main>
+    
+    {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
   </body>
 </html>
