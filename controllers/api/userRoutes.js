@@ -13,7 +13,6 @@ router.post("/", async (req, res) => {
       req.session.loggedIn = true;
       res.status(200).json(dbUserData);
     });
-
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -42,12 +41,13 @@ router.post("/login", async (req, res) => {
         .status(400)
         .json({ message: "Incorrect username or password, please try again" });
       return;
-    } else {
-      req.session.save(() => {
-        req.session.logged_in = true;
-      });
-      res.json({ user: userData, message: "You are now logged in!" });
     }
+
+    req.session.save(() => {
+      req.session.loggedIn = true;
+      console.log("AAAAAAAAAAAAAAAAAAAAAA", req.session);
+      res.json({ user: userData, message: "You are now logged in!" });
+    });
   } catch (err) {
     res.status(400).json(err);
   }
@@ -56,7 +56,7 @@ router.post("/login", async (req, res) => {
 // ==================== Log Out ======================
 
 router.post("/logout", (req, res) => {
-  if (req.session.logged_in) {
+  if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
     });

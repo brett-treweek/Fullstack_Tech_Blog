@@ -23,7 +23,7 @@ function showLogin() {
     signModal.classList.add("display");
   }
   
-
+// ================= Log In =====================
 const loginForm = async (event) => {
     event.preventDefault();
   

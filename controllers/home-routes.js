@@ -5,7 +5,10 @@ router.get("/", async (req, res) => {
   try {
     const postData = await Posts.findAll();
     const posts = postData.map((post) => post.get({ plain: true }));
-    res.render("homepage", { posts });
+    res.render("homepage", { 
+      posts,
+      loggedIn: req.session.loggedIn,
+    });
   } catch (error) {
     res.status(500).json(error);
   }
@@ -28,10 +31,12 @@ router.get("/users/:id", async (req, res) => {
           ],
         },
       ],
-    });
+  });
 
     let user = userDashboard.get({ plain: true });
-    res.render("dashboard", { posts: user.posts });
+    res.render("dashboard", { 
+      posts: user.posts,
+      loggedIn: req.session.loggedIn });
   } catch (error) {
     res.status(500).json(error);
   }
