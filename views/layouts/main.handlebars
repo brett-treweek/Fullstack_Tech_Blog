@@ -18,9 +18,9 @@
       <a id="logo" href="/">Fullstack Tech Blog</a>
       <nav>
         <ul>
-          {{!-- <li><a href="/">Home</a></li> --}}
-          <a href="/users/">Dashboard</a>
-          {{!-- <a href="/">Home</a> --}}
+          {{#if loggedIn}}
+          <a id="dashboardBtn" href="/dashboard">Dashboard</a>
+          {{/if}}
           {{#if loggedIn}}
           <button id="logout">Logout</button>
           {{else}}

@@ -14,13 +14,13 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/users/:id", async (req, res) => {
-  console.log(req.session)
+router.get("/dashboard", async (req, res) => {
   if (!req.session.loggedIn) {
     res.redirect('/login');
   } else {
   try {
-    const userDashboard = await User.findByPk(req.params.id, {
+    console.log('YYYYYYYYYYYYYYYYYYY',req.session.userId)
+    const userDashboard = await User.findByPk(req.session.userId, {
       include: [
         {
           model: Posts,
@@ -35,6 +35,7 @@ router.get("/users/:id", async (req, res) => {
 
     let user = userDashboard.get({ plain: true });
     res.render("dashboard", { 
+      id: user.id,
       posts: user.posts,
       loggedIn: req.session.loggedIn });
   } catch (error) {

@@ -39,6 +39,7 @@ const loginForm = async (event) => {
   
       if (response.ok) {
         document.location.replace("/");
+        console.log('TTTTTTTTTTTTTTTTTTTT', )
       } else {
         alert("Failed to log in");
       }
