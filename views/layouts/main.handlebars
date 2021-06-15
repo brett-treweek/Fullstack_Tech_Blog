@@ -18,13 +18,17 @@
       <a id="logo" href="/">Fullstack Tech Blog</a>
       <nav>
         <ul>
+          <a href="/">Home</a>
           {{#if loggedIn}}
           <a id="dashboardBtn" href="/dashboard">Dashboard</a>
           {{/if}}
           {{#if loggedIn}}
-          <button id="logout">Logout</button>
+          <a id="logout">Logout</a>
           {{else}}
           <a id="loginBtn" href="/login">Login</a>
+          {{/if}}
+          {{#if loggedIn}}
+          <p id="nav-username">{{username}}</p>
           {{/if}}
           
         </ul>
