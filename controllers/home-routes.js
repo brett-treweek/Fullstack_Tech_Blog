@@ -20,7 +20,6 @@ router.get("/dashboard", async (req, res) => {
     res.redirect("/login");
   } else {
     try {
-      console.log("YYYYYYYYYYYYYYYYYYY", req.session.userId);
       const userDashboard = await User.findByPk(req.session.userId, {
         include: [
           {
@@ -44,6 +43,27 @@ router.get("/dashboard", async (req, res) => {
     } catch (error) {
       res.status(500).json(error);
     }
+  }
+});
+
+router.post("/dashboard", async (req, res) => {
+  try {
+    const postData = await Posts.create({
+      author: req.session.username,
+      title: req.body.title,
+      content: req.body.content,
+      user_id: req.session.userId
+    });
+
+    console.log(' Post Data', postData)
+
+    req.session.save(() => {
+      req.session.loggedIn = true;
+      res.status(200).json(postData);
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
   }
 });
 

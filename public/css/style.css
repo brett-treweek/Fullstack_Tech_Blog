@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
 }
 
 html {
@@ -97,31 +98,32 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 95vw;
+  max-height: 95vh;
   flex-direction: column;
   padding: 3rem;
   border-radius: 15px;
   background-color: teal;
 }
-.signModal {
+.signModal, .postModal {
   display: none;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 95vw;
+  max-height: 95vh;
   flex-direction: column;
   padding: 3rem;
   border-radius: 15px;
   background-color: teal;
+  z-index: 100;
 }
 
 .closeBtn {
   font-size: larger;
   position: absolute;
-  background-color: teal;
+  background-color: #2a224e;
   color: #fff;
   top: 1.5rem;
   right: 1.5rem;
@@ -166,21 +168,18 @@ body {
   align-items: center;
 }
 
-#submitLogin, #submitSign {
+#submitLogin, #submitSign, #newPostBtn, #submitBlog {
   background-color: rgb(91, 97, 184);
   color: #fff;
   width: 50%;
   padding: 0.7rem;
   cursor: pointer;
 }
-#submitSign:hover {
+#submitSign:hover, #submitLogin:hover, #newPostBtn:hover, #submitBlog:hover {
   background-color: rgb(0, 17, 255);
   color: #fff;
 }
-#submitLogin:hover {
-  background-color: rgb(0, 17, 255);
-  color: #fff;
-}
+
 
 #signBtn {
   background-color: rgb(241, 181, 140);
@@ -195,6 +194,28 @@ body {
   color: #fff;
 }
 
+.postTitle {
+  text-align: center;
+  color: #fff;
+  font-weight: 400;
+}
+
+#titleInput {
+  text-align: center;
+  letter-spacing: 0.1ch;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+#postTextarea {
+  line-height: 1.5rem;
+  padding: 1rem;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.1ch;
+  max-width: 90vw;
+}
+
 /* Hide Class */
 .hide {
   display: none !important;
@@ -202,4 +223,8 @@ body {
 
 .display {
   display: flex !important;
+}
+
+.blur {
+  filter: blur(3px);
 }

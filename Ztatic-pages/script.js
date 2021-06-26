@@ -6,7 +6,7 @@ const closeLogin = document.querySelector("#closeLogin");
 const closeSign = document.querySelector("#closeSign");
 const signUpBtn = document.querySelector("#signBtn");
 const blogs = document.querySelectorAll(".blogContainer");
-const blogText = document.querySelector('.blogContent')
+const blogText = document.querySelector('.blogContent');
 
 console.log(blogs);
 
@@ -42,8 +42,3 @@ function hideSignUp() {
   content.classList.remove("hide");
 }
 
-
-var editor = new Quill('#editor', {
-  modules: { toolbar: '#toolbar' },
-  theme: 'snow'
-});

@@ -1,15 +1,3 @@
-
-<div class="body">
-<button id="newPostBtn">New Post</button>
-{{#each posts as |post|}}
-{{> dashboard-posts}}
-<h2 id="commentTitle">Comments</h2>
-{{#each post.comments as |comment|}}
-{{> dashboard-comments}}
-{{/each}}
-{{/each}}
-</div>
-<div>
 <section class="postModal">
   <h1 class="postTitle">New Post</h1>
   <button id="closePost" class="closeBtn">&times;</button>
@@ -22,9 +10,6 @@
       rows="10"
       placeholder="Channel your inner Shakesphere"
     ></textarea>
-    <button id="submitBlog" value="Save" />
+    <input id="submitBlog" type="submit" value="Save" />
   </form>
 </section>
-</div>
-
-<script src="/js/script.js"></script>
