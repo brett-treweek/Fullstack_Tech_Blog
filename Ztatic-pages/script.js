@@ -6,6 +6,7 @@ const closeLogin = document.querySelector("#closeLogin");
 const closeSign = document.querySelector("#closeSign");
 const signUpBtn = document.querySelector("#signBtn");
 const blogs = document.querySelectorAll(".blogContainer");
+const blogText = document.querySelector('.blogContent')
 
 console.log(blogs);
 
@@ -13,7 +14,7 @@ loginBtn.addEventListener("click", showLogin);
 closeLogin.addEventListener("click", hideLogin);
 signUpBtn.addEventListener("click", showSignUp);
 closeSign.addEventListener("click", hideSignUp);
-
+// blogs.addEventListener('click', showblogtext)
 
 blogs.forEach((blog) => {
     blog.addEventListener('click', () => {
@@ -40,3 +41,9 @@ function hideSignUp() {
   signModal.classList.remove("display");
   content.classList.remove("hide");
 }
+
+
+var editor = new Quill('#editor', {
+  modules: { toolbar: '#toolbar' },
+  theme: 'snow'
+});
