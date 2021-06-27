@@ -33,11 +33,9 @@ body {
   font-size: 4.5rem;
 }
 
-.header button {
-  background: transparent;
-  border: transparent;
+.header ul a {
   list-style: none;
-  width: 200px;
+  width: 150px;
   text-decoration: none;
   text-align: center;
 }
@@ -46,7 +44,7 @@ body {
   font-size: 2rem;
 }
 
-.header a, .header button{
+.header a {
   text-decoration: none;
   font-size: 1.3rem;
   padding: 0.5rem;
@@ -54,19 +52,33 @@ body {
   text-align: center;
   letter-spacing: 0.1ch;
   cursor:pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-.header ul button:hover {
-  border-bottom: 2px solid #ffffff;
-  
+.header ul a:hover {
+  color: aqua;
+  letter-spacing: 0.2ch;
+}
+
+#nav-username {
+  text-align: center;
+  color: rgb(238, 255, 0);
+  font-size: 0.7rem;
+  letter-spacing: 0.1ch;
+  padding-left: 0.5rem;
+
 }
 
 /* ================= Blog Posts ================== */
 
-.blogContainer {
+.blogContainer, .commentContainer {
   margin: 2rem;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+.commentContainer {
+  /* display: none; */
 }
 
 .blogTitle {
@@ -88,6 +100,22 @@ body {
   background-color: #fff;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+.viewPost {
+  background-color: rgb(91, 97, 184);
+  margin: 0 1rem;
+  width: 3rem;
+  height: 1.5rem;
+  border:none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.selectBlog:hover {
+  color: aqua;
+  cursor: pointer;
 }
 
 /* ================= Sign in/up Modals =================== */
@@ -169,13 +197,14 @@ body {
 }
 
 #submitLogin, #submitSign, #newPostBtn, #submitBlog {
+  text-align: center;
   background-color: rgb(91, 97, 184);
   color: #fff;
   width: 50%;
   padding: 0.7rem;
   cursor: pointer;
 }
-#submitSign:hover, #submitLogin:hover, #newPostBtn:hover, #submitBlog:hover {
+#submitSign:hover, #submitLogin:hover, #newPostBtn:hover, #submitBlog:hover, .viewPost:hover{
   background-color: rgb(0, 17, 255);
   color: #fff;
 }
@@ -214,6 +243,13 @@ body {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.1ch;
   max-width: 90vw;
+}
+
+#newPostBtn {
+  margin: 1rem 2rem 0;
+  width: 150px;
+  border: none;
+  border-radius: 10px;
 }
 
 /* Hide Class */

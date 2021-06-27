@@ -1,4 +1,5 @@
 const router = require("express").Router();
+// const { where } = require("sequelize/types");
 const { Posts, User, Comments } = require("../models");
 
 router.get("/", async (req, res) => {
@@ -14,6 +15,24 @@ router.get("/", async (req, res) => {
     res.status(500).json(error);
   }
 });
+
+router.get("/view/:id", async (req, res) => {
+  try {
+    console.log('req.params:', req.params)
+
+    const postData = await Posts.findByPk(req.params.id);
+    console.log('postbyPk:', postData)
+    const posts = postData.get({ plain: true });
+    console.log('PPPPPPPPPPPPPP:',posts)
+    res.render("view", {
+      posts,
+    });
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
+
 
 router.get("/dashboard", async (req, res) => {
   if (!req.session.loggedIn) {
@@ -52,10 +71,10 @@ router.post("/dashboard", async (req, res) => {
       author: req.session.username,
       title: req.body.title,
       content: req.body.content,
-      user_id: req.session.userId
+      user_id: req.session.userId,
     });
 
-    console.log(' Post Data', postData)
+    console.log(" Post Data", postData);
 
     req.session.save(() => {
       req.session.loggedIn = true;
@@ -69,7 +88,7 @@ router.post("/dashboard", async (req, res) => {
 
 router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect('/');
+    res.redirect("/");
     return;
   }
 
