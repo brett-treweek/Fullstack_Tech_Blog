@@ -1,7 +1,36 @@
-<h1>Hello World</h1>
+<div class="body">
+<section class="blogContainer">
+      <div class="blogTitle">
+          {{#with posts}}
+        <h3 class="selectBlog" id={{id}}>{{title}}</h3>
+        <p>{{author}} - {{ format_date dateCreated }}</p>
+      </div>
+      <div class="blogContent">
+        {{content}} 
+      </div>
+</section>
+<h1 class="commentH1">Comments</h1>
+<button id="addComment">Add Comment</button>
+    {{#each comments as |comment|}}
+    {{> view-comments}}
+    {{/each}}
+    {{/with}}
+</div>
+<div>
+<section class="commentModal">
+  <h1 class="commentTitle">New Comment</h1>
+  <button id="closePost" class="closeBtn">&times;</button>
+  <form class="form" action="#">
+    <textarea
+      name="post"
+      id="postTextarea"
+      cols="100"
+      rows="10"
+      placeholder="Channel your inner Shakesphere"
+    ></textarea>
+    <input id="submitComment" value="Save" type="button"/>
+  </form>
+</section>
+</div>
 
-{{#with posts}}
-<h1>{{title}}</h1>
-<h1>{{author}}</h1>
-<h1>{{content}}</h1>
-{{/with}}
+<script src="/js/addComments.js"></script>

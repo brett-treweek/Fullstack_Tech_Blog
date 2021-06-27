@@ -13,7 +13,7 @@ Comments.init(
     },
     author: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     content: {
       type: DataTypes.TEXT,
@@ -34,7 +34,7 @@ Comments.init(
     },
     userId: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       references: {
         model: "user",
         key: "id",

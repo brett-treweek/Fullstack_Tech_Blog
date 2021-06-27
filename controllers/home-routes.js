@@ -18,21 +18,22 @@ router.get("/", async (req, res) => {
 
 router.get("/view/:id", async (req, res) => {
   try {
-    console.log('req.params:', req.params)
+    // console.log('req.params:', req.params)
 
-    const postData = await Posts.findByPk(req.params.id);
-    console.log('postbyPk:', postData)
+    const postData = await Posts.findByPk(req.params.id, {
+      include: { model: Comments },
+    });
+    // console.log('postbyPk:', postData)
     const posts = postData.get({ plain: true });
-    console.log('PPPPPPPPPPPPPP:',posts)
+    console.log("PPPPPPPPPPPPPP:", posts.comments);
     res.render("view", {
       posts,
+      comments: posts.comments,
     });
   } catch (error) {
     res.status(500).json(error);
   }
 });
-
-
 
 router.get("/dashboard", async (req, res) => {
   if (!req.session.loggedIn) {
@@ -80,6 +81,22 @@ router.post("/dashboard", async (req, res) => {
       req.session.loggedIn = true;
       res.status(200).json(postData);
     });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.post("/comment", async (req, res) => {
+  try {
+    const postData = await Comments.create({
+      postsId: req.body.postId,
+      author: 'annonymous',
+      content: req.body.content,
+      user_id: req.session.userId,
+    });
+    console.log(" Post Data", postData);
+    res.status(200).json(postData);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

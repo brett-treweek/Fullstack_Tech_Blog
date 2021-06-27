@@ -9,10 +9,11 @@ blogs.forEach((blog) => {
 
 function showBlog(e){
     let id = e.target.id;
-    console.log(id )
+    console.log(id)
     document.location.replace(`/view/${id}`)
     }
   
+
 
 
 
