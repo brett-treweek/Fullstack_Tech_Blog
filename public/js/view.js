@@ -9,15 +9,8 @@ closeModal.addEventListener('click', () => {
 })
 
 document
-.querySelector('#addComment')
-.addEventListener('click', () => {
-    comments.classList.add('display')
-    body.classList.add('blur')
-})
-
-document
 .querySelector('.selectBlog')
-.addEventListener('click', () => document.location.replace('/'))
+.addEventListener('click', () => document.location.replace('/dashboard'))
 
 
 document
@@ -40,4 +33,11 @@ document
           alert("Failed to create comment.");
         }
       }
+})
+
+document
+.querySelector('#addComment')
+.addEventListener('click', () => {
+    comments.classList.add('display')
+    body.classList.add('blur')
 })

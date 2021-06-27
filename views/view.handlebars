@@ -1,4 +1,7 @@
 <div class="body">
+{{#if loggedIn}}
+<button id="addComment">Add Comment</button>
+{{/if}}
 <section class="blogContainer">
       <div class="blogTitle">
           {{#with posts}}
@@ -10,7 +13,6 @@
       </div>
 </section>
 <h1 class="commentH1">Comments</h1>
-<button id="addComment">Add Comment</button>
     {{#each comments as |comment|}}
     {{> view-comments}}
     {{/each}}
@@ -33,4 +35,9 @@
 </section>
 </div>
 
-<script src="/js/addComments.js"></script>
+{{#if loggedIn}}
+<script src="/js/view.js"></script>
+{{else}}
+<script src="/js/loggedOutView.js"></script>
+{{/if}}
+

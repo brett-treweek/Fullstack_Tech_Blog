@@ -3,9 +3,6 @@
 <button id="newPostBtn">New Post</button>
 {{#each posts as |post|}}
 {{> dashboard-posts}}
-{{#each post.comments as |comment|}}
-{{> dashboard-comments}}
-{{/each}}
 {{/each}}
 </div>
 
@@ -27,4 +24,5 @@
 </section>
 </div>
 
-<script src="/js/newPost.js"></script>
+<script src="/js/dashboard.js"></script>
+<script src="/js/homepage.js"></script>

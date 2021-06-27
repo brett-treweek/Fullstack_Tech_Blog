@@ -1,7 +1,7 @@
 <section  class="blogContainer">
       <div class="blogTitle">
-        <h3>{{title}}</h3>
-        <p>{{author}} - {{ format_date dateCreated }}<button class="viewPost">View</button></p>
+        <h3 class="selectBlog" id={{id}}>{{title}}</h3>
+        <p>{{author}} - {{ format_date dateCreated }}<button class="deletePost" id={{id}}>Edit</button><button class="deletePost" id={{id}}>Delete</button></p>
         
       </div>
       <div class="blogContent">

@@ -12,7 +12,7 @@ function showBlog(e){
     console.log(id)
     document.location.replace(`/view/${id}`)
     }
-  
+
 
 
 

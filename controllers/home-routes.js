@@ -1,5 +1,4 @@
 const router = require("express").Router();
-// const { where } = require("sequelize/types");
 const { Posts, User, Comments } = require("../models");
 
 router.get("/", async (req, res) => {
@@ -29,6 +28,8 @@ router.get("/view/:id", async (req, res) => {
     res.render("view", {
       posts,
       comments: posts.comments,
+      loggedIn: req.session.loggedIn,
+      username: req.session.username,
     });
   } catch (error) {
     res.status(500).json(error);
@@ -73,6 +74,7 @@ router.post("/dashboard", async (req, res) => {
       title: req.body.title,
       content: req.body.content,
       user_id: req.session.userId,
+      loggedIn: req.session.loggedIn,
     });
 
     console.log(" Post Data", postData);
@@ -87,13 +89,33 @@ router.post("/dashboard", async (req, res) => {
   }
 });
 
+router.delete("/dashboard", async (req, res) => {
+  try {
+    console.log("here is the request body ", req.body);
+    const Data = await Posts.destroy({
+      where: {
+        id: req.body.postId,
+      },
+    });
+    req.session.save(() => {
+      req.session.loggedIn = true;
+      res.status(200).json(Data);
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 router.post("/comment", async (req, res) => {
   try {
     const postData = await Comments.create({
+
       postsId: req.body.postId,
-      author: 'annonymous',
+      author: "annonymous",
       content: req.body.content,
       user_id: req.session.userId,
+      loggedIn: req.session.loggedIn,
     });
     console.log(" Post Data", postData);
     res.status(200).json(postData);
