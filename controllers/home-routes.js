@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const { Posts, User, Comments } = require("../models");
 
+// ===================== View Homepage ==================================
+
 router.get("/", async (req, res) => {
   try {
     const postData = await Posts.findAll();
@@ -15,16 +17,14 @@ router.get("/", async (req, res) => {
   }
 });
 
+// ==================== View Post with comments by ID ===========================
+
 router.get("/view/:id", async (req, res) => {
   try {
-    // console.log('req.params:', req.params)
-
     const postData = await Posts.findByPk(req.params.id, {
       include: { model: Comments },
     });
-    // console.log('postbyPk:', postData)
     const posts = postData.get({ plain: true });
-    console.log("PPPPPPPPPPPPPP:", posts.comments);
     res.render("view", {
       posts,
       comments: posts.comments,
@@ -35,6 +35,8 @@ router.get("/view/:id", async (req, res) => {
     res.status(500).json(error);
   }
 });
+
+// ====================== View Dashboard ==============================
 
 router.get("/dashboard", async (req, res) => {
   if (!req.session.loggedIn) {
@@ -67,6 +69,8 @@ router.get("/dashboard", async (req, res) => {
   }
 });
 
+// ============================= Create New Post ============================
+
 router.post("/dashboard", async (req, res) => {
   try {
     const postData = await Posts.create({
@@ -89,6 +93,8 @@ router.post("/dashboard", async (req, res) => {
   }
 });
 
+// ============================ Delete Post =============================
+
 router.delete("/dashboard", async (req, res) => {
   try {
     console.log("here is the request body ", req.body);
@@ -107,12 +113,42 @@ router.delete("/dashboard", async (req, res) => {
   }
 });
 
+// ========================= Update Post =================================
+
+router.put("/dashboard", async (req, res) => {
+  try {
+    console.log("here is the request body ", req.body);
+    const Data = await Posts.update({
+      author: req.session.username,
+      title: req.body.title,
+      content: req.body.content,
+      user_id: req.session.userId,
+      loggedIn: req.session.loggedIn,
+    },
+    {
+      where: {
+        id: req.body.postId
+      }
+    }
+    );
+    req.session.save(() => {
+      req.session.loggedIn = true;
+      res.status(200).json(Data);
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+// ============================ Create New Comment ==============================
+
 router.post("/comment", async (req, res) => {
   try {
     const postData = await Comments.create({
 
       postsId: req.body.postId,
-      author: "annonymous",
+      author: req.session.username,
       content: req.body.content,
       user_id: req.session.userId,
       loggedIn: req.session.loggedIn,
@@ -125,12 +161,13 @@ router.post("/comment", async (req, res) => {
   }
 });
 
+// ========================= Render Login Page ==========================
+
 router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
     res.redirect("/");
     return;
   }
-
   res.render("login");
 });
 

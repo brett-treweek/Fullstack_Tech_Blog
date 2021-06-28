@@ -108,7 +108,7 @@ body {
   border-bottom-right-radius: 10px;
 }
 
-.deletePost {
+.deletePost, .editPost {
   background-color: rgb(91, 97, 184);
   margin: 0 1rem;
   width: 3rem;
@@ -139,7 +139,7 @@ body {
   border-radius: 15px;
   background-color: teal;
 }
-.signModal, .postModal, .commentModal {
+.signModal, .postModal, .commentModal, .editModal {
   display: none;
   position: fixed;
   top: 50%;
@@ -167,7 +167,7 @@ body {
   cursor: pointer;
 }
 
-.closeBtn:hover, .deletePost:hover {
+.closeBtn:hover, .deletePost:hover, .editPost:hover {
   background-color: rgb(255, 0, 0);
 }
 
@@ -202,7 +202,7 @@ body {
   align-items: center;
 }
 
-#submitLogin, #submitSign, #newPostBtn, #submitBlog, #addComment, #submitComment {
+#submitLogin, #submitSign, #newPostBtn, #submitBlog, #addComment, #submitComment, #editBlog {
   text-align: center;
   background-color: rgb(91, 97, 184);
   color: #fff;
@@ -210,7 +210,7 @@ body {
   padding: 0.7rem;
   cursor: pointer;
 }
-#submitSign:hover, #submitLogin:hover, #newPostBtn:hover, #submitBlog:hover, #addComment:hover{
+#submitSign:hover, #submitLogin:hover, #newPostBtn:hover, #submitBlog:hover, #addComment:hover, #editBlog:hover{
   background-color: rgb(0, 17, 255);
   color: #fff;
 }
@@ -229,20 +229,20 @@ body {
   color: #fff;
 }
 
-.postTitle, .commentTitle {
+.postTitle, .commentTitle, .editTitle {
   text-align: center;
   color: #fff;
   font-weight: 400;
 }
 
-#titleInput {
+#titleInput, .editInput {
   text-align: center;
   letter-spacing: 0.1ch;
   font-size: 1.5rem;
   font-weight: 300;
 }
 
-#postTextarea {
+#postTextarea, #editTextarea {
   line-height: 1.5rem;
   padding: 1rem;
   border-radius: 10px;
