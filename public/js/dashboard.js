@@ -97,7 +97,6 @@ async function editBlogModal(e) {
   let Content = document.querySelector("#editTextarea");
   Title.value = postTitle;
   Content.value = postContent;
-  // console.log("AAAAAAAAAAAAAAAAAA", Title, Content);
 
   saveBtn.addEventListener("click", editBlogRequest);
 
