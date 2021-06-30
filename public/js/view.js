@@ -2,17 +2,19 @@ const comments = document.querySelector(".commentModal");
 const closeModal = document.querySelector('#closePost')
 const body = document.querySelector('.body')
 
-
+// ============ Close Modal Button ================
 closeModal.addEventListener('click', () => {
     comments.classList.remove('display')
     body.classList.remove('blur')
 })
 
+// ============= Hide Blog Modal ================
 document
 .querySelector('.selectBlog')
 .addEventListener('click', () => document.location.replace('/dashboard'))
 
 
+// ============= Submit New Comment =====================
 document
 .querySelector('#submitComment')
 .addEventListener('click', async (e) => {
@@ -35,6 +37,7 @@ document
       }
 })
 
+// ============ Display Add Comment Modal ===================
 document
 .querySelector('#addComment')
 .addEventListener('click', () => {

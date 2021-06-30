@@ -1,30 +1,30 @@
 [
     { "author": "Brett", 
-      "title": "Music Near Me",
+      "title": "Joe Abercrombie is a great author",
       "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero consequatur repudiandae itaque numquam provident, magnam delectus tempore aperiam, inventore assumenda, ipsum nemo ut? Itaque, nemo.",
       "date": "",
       "userId": 1
     },
     { "author": "Brett", 
-      "title": "Second Test Post for Brett",
+      "title": "Why I love Warzone, and why I cant play it anymore",
       "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero consequatur repudiandae itaque numquam provident, magnam delectus tempore aperiam, inventore assumenda, ipsum nemo ut? Itaque, nemo.",
       "date": "",
       "userId": 1
     },
     { "author": "Brett", 
-      "title": "Third Test Post for Brett",
+      "title": "When you realise that you should join your local toastmasters",
       "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero consequatur repudiandae itaque numquam provident, magnam delectus tempore aperiam, inventore assumenda, ipsum nemo ut? Itaque, nemo.",
       "date": "",
       "userId": 1
     },
     { "author": "Mia", 
-      "title": "They call me Lilith- Queen of Hell",
+      "title": "They call me Lilith - Queen of Hell",
       "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero consequatur repudiandae itaque numquam provident, magnam delectus tempore aperiam, inventore assumenda, ipsum nemo ut? Itaque, nemo.",
       "date": "27/11/2020",
       "userId": 2
     },
     { "author": "Mia", 
-      "title": "They call me Lilith- Queen of the Damned",
+      "title": "How to make dinner time a minor disaster",
       "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero consequatur repudiandae itaque numquam provident, magnam delectus tempore aperiam, inventore assumenda, ipsum nemo ut? Itaque, nemo.",
       "date": "27/11/2020",
       "userId": 2
@@ -48,7 +48,7 @@
       "userId": 3
     },
     { "author": "Meryl", 
-      "title": "I love being french",
+      "title": "Where is my baguette",
       "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero consequatur repudiandae itaque numquam provident, magnam delectus tempore aperiam, inventore assumenda, ipsum nemo ut? Itaque, nemo.",
       "date": "30/07/1991",
       "userId": 3

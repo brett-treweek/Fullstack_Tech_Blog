@@ -77,10 +77,6 @@ body {
   border-bottom-right-radius: 10px;
 }
 
-.commentContainer {
-  /* display: none; */
-}
-
 .commentH1 {
   color: black;
   text-align: center;

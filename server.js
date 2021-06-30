@@ -11,10 +11,14 @@ const helpers = require("./utils/helpers");
 const app = express();
 const PORT = process.env.PORT || 3306;
 
+// cookie will expire after 5mins of user inactivity, they will then need to log back in.
 const sess = {
   secret: "Big Secret",
-  cookie: {},
-  resave: false,
+  cookie: {
+    maxAge: 300000,
+  },
+  resave: true,
+  rolling: true,
   saveUninitialized: true,
   store: new SequelizeStore({
     db: sequelize,
