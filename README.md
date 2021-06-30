@@ -1,6 +1,6 @@
 # Fullstack Tech Blog  
   
-![alt text](./public/images/techBlogScreenshot.PNG)
+![Homepage of app](./public/images/techBlogScreenshot.PNG)
 
 [Here is a link to the deployed App on Heroku](https://fullstack-tech-blog.herokuapp.com/)
 
@@ -43,6 +43,8 @@ npm run seed
 
 ---
 ## Usage
+
+![add post modal](./public/images/newPost.PNG)
 The best way to try the app is on heroku.
 You can create a new account or use these credentials to log in.  
 ```
@@ -59,7 +61,7 @@ npm start
 ```
 Then open your browser and navigate to:
 ```bash
-http://localhost:3001
+localhost:3001
 ```
 
 
