@@ -93,6 +93,10 @@ body {
   letter-spacing: 0.1ch;
 }
 
+.selectBlog {
+  text-decoration: underline;
+}
+
 .blogTitle h3 {
   font-weight: 300;
 }
